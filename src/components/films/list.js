@@ -1,8 +1,9 @@
 import React from 'react';
-import { graphql } from 'react-apollo';
 import { ListQuery } from '../../queries/queries/films';
+import { useQuery } from '@apollo/react-hooks';
 
-export function List(props) {
+export default function List() {
+    const { data, loading } = useQuery(ListQuery);
     return (
         <div className="container">
             <h1>List</h1>
@@ -14,8 +15,8 @@ export function List(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {!props.listFilms.loading ?
-                        props.listFilms.allFilms.map((it) =>
+                    {!loading ?
+                        data.allFilms.map((it) =>
                             <tr key={it.id}>
                                 <td>{it.title}</td>
                                 <td>
@@ -30,5 +31,3 @@ export function List(props) {
         </div>
     );
 }
-
-export default graphql(ListQuery, { name: 'listFilms' })(List);
