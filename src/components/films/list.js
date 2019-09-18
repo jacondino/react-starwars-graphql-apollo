@@ -12,7 +12,7 @@ export default function List() {
         <Row id="container-movies" className="pt-3">
             {!loading ?
                 data.allFilms.map(it =>
-                    <Col xs="4" key={it.episodeId} className="container-movie">
+                    <Col xs="12" sm="4" key={it.episodeId} className="container-movie">
                         <div className="movie">
                             <div className="movie-inside front">
                                 <img alt={it.title} className='movie-image-list' src={require(`../../assets/${it.episodeId}.jpg`)} />
