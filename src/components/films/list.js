@@ -27,7 +27,7 @@ export default function List() {
                                 </div>
                             </div>
                         </div>
-                    </Col>) : <div>loading</div>}
+                    </Col>) : <Col><h1 className="text-light">Loading...</h1></Col>}
         </Row>
     );
 }
