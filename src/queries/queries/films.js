@@ -6,9 +6,9 @@ query {
 	films{
 	    id,
 	    title,
-	    createdAt,
-			director,
-	    episodeId,
+	    created,
+	    director,
+	    episodeID,
 	    producers,
 	    openingCrawl
        }
