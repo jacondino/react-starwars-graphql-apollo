@@ -3,13 +3,15 @@ import gql from 'graphql-tag';
 export const ListQuery = gql`
 query {
   allFilms{
-    id,
-    title,
-    createdAt,
-		director,
-    episodeId,
-    producers,
-    openingCrawl
-  }
+	films{
+	    id,
+	    title,
+	    createdAt,
+			director,
+	    episodeId,
+	    producers,
+	    openingCrawl
+       }
+   }
 }
 `;
