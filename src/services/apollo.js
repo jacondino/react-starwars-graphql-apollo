@@ -4,7 +4,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
 const httpLink = new HttpLink({
-    uri: 'https://api.graph.cool/simple/v1/swapi',
+    uri: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
   });
   
   const client = new ApolloClient({

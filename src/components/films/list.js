@@ -11,16 +11,16 @@ export default function List() {
     return (
         <Row id="container-movies" className="pt-3">
             {!loading ?
-                data.allFilms.map(it =>
-                    <Col xs="12" sm="4" key={it.episodeId} className="container-movie">
+                data.allFilms.films.map(it =>
+                    <Col xs="12" sm="4" key={it.episodeID} className="container-movie">
                         <div className="movie">
                             <div className="movie-inside front">
-                                <img alt={it.title} className='movie-image-list' src={require(`../../assets/${it.episodeId}.jpg`)} />
+                                <img alt={it.title} className='movie-image-list' src={require(`../../assets/${it.episodeID}.jpg`)} />
                             </div>
                             <div className="movie-inside back">
                                 <div className="movie-details">
                                     <div className="movie-snap">
-                                        <img alt={it.title} src={require(`../../assets/${it.episodeId}.jpg`)} />
+                                        <img alt={it.title} src={require(`../../assets/${it.episodeID}.jpg`)} />
                                     </div>
                                     <h1>{it.title} <br /><span><Moment format="DD/MM/YYYY">{it.createdAt}</Moment></span></h1>
                                     <p className="movie-synopsis">{it.openingCrawl}</p>
